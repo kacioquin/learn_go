@@ -1,11 +1,19 @@
 package controllers
 
 import (
+	"bytes"
+	"fmt"
 	"net/http"
 
-	"github.com/kacioquin/learn_go/api_gin/api/entities"
+	"log"
 
 	"github.com/gin-gonic/gin"
+	"github.com/kacioquin/learn_go/api_gin/api/entities"
+)
+
+var (
+	buf    bytes.Buffer
+	logger = log.New(&buf, "logger: ", log.Lshortfile)
 )
 
 type tweetController struct {
@@ -17,6 +25,8 @@ func NewTweetController() *tweetController {
 }
 
 func (t *tweetController) FindAll(ctx *gin.Context) {
+	logger.Print("Hello, log file!")
+	fmt.Print(&buf)
 	ctx.JSON(http.StatusOK, t.tweets)
 }
 
