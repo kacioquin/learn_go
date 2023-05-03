@@ -16,4 +16,18 @@ func main() {
 	array3 := [...]int{1, 2, 3}
 	fmt.Println(array3)
 
+	fmt.Println("Slices ---------------------")
+
+	slice := []int{1, 2, 3, 4, 5}
+	fmt.Println(slice)
+
+	slice = append(slice, 6)
+	fmt.Println(slice)
+
+	slice2 := array2[1:3]
+	fmt.Println(slice2)
+
+	array2[1] = "PosicaoAlterada"
+	fmt.Println(slice2)
+
 }
