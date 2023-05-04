@@ -30,4 +30,21 @@ func main() {
 	array2[1] = "PosicaoAlterada"
 	fmt.Println(slice2)
 
+	fmt.Println("Arrays internos ------------------- ")
+	slice3 := make([]float32, 10, 11)
+
+	slice3 = append(slice3, 5)
+	slice3 = append(slice3, 6)
+
+	fmt.Println(slice3)
+	fmt.Println("tamanho - ", len(slice3))
+	fmt.Println("capacidade - ", cap(slice3))
+
+	slice4 := make([]float32, 5)
+
+	fmt.Println(slice4)
+	slice4 = append(slice4, 5)
+	fmt.Println("tamanho - ", len(slice4))
+	fmt.Println("capacidade - ", cap(slice4))
+
 }
